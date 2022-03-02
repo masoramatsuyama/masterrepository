@@ -1,0 +1,18 @@
+
+アーティスト詳細<br><br>
+
+<video  src="{{ artist.video.url }}" type="video/mp4" controls width=300></video><br>
+<img src="{{ artist.artistimage.url }}" width=300><br>
+{{ artist.artistname }}<br>
+{{ artist.from }}<br>
+{{ artist.artistex }}<br><br>
+
+＜作品例＞<br>
+{% for art in artist.myart.all %}
+    <img src="{{ art.artimage.url }}" width=300><br>
+    {{ art.artname }}<br>
+{% endfor %}
+<br>
+<br>
+<a href="{% url 'buy' artist.pk %}">ヒト箱の作成を依頼する</a>
+

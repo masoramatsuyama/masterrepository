@@ -1,0 +1,12 @@
+
+アーティストリスト<br><br>
+
+
+{% for artist in artist_list %}
+
+    <img src="{{ artist.artistimage.url }}" width=300><br>
+    {{ artist.artistname }}<br>
+    <a href="{% url 'artistdetail' artist.pk %}">→詳しく見る</a><br>
+    <br>
+    <br>
+{% endfor %}
